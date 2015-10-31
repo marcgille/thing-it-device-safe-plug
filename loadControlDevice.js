@@ -2,7 +2,7 @@ module.exports = {
     metadata: {
         family: "loadControlDevice",
         plugin: "loadControlDevice",
-        label: "SafePlug © LOad Control Device",
+        label: "SafePlug © Load Control Device",
         tangible: true,
         discoverable: true,
         state: [{
