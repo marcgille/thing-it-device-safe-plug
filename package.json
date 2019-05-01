@@ -1,6 +1,6 @@
 {
   "name": "@thing-it/device-safe-plug",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "[thing-it-node] Device Plugin for SafePlug © products.",
   "authors": "Marc Gille",
   "license": "MIT, EPL",
