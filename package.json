@@ -1,5 +1,5 @@
 {
-  "name": "thing-it-device-safe-plug",
+  "name": "@thing-it/device-safe-plug",
   "version": "0.0.2",
   "description": "[thing-it-node] Device Plugin for SafePlug © products.",
   "authors": "Marc Gille",
@@ -12,9 +12,12 @@
     "SmartHome",
     "Energy"
   ],
+  "scripts": {
+    "postversion": "git push && git push --tags && npm publish"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/marcgille/thing-it-device-safe-plug"
+    "url": "https://github.com/thing-it/thing-it-device-safe-plug"
   },
   "dependencies": {
     "q": "^1.4.1"
