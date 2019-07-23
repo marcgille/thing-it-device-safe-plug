@@ -60,6 +60,12 @@ function LoadControlDevice() {
     LoadControlDevice.prototype.start = function () {
         var deferred = q.defer();
 
+        this.operationalState = {
+            status: 'PENDING',
+            message: 'Waiting for initialization...'
+        };
+        this.publishOperationalStateChange();
+
         this.state = {load: 0};
 
         if (this.isSimulated()) {
@@ -69,8 +75,21 @@ function LoadControlDevice() {
 
                 this.publishStateChange();
             }.bind(this), 10000);
+            
+            this.operationalState = {
+                status: 'OK',
+                message: 'Load Control Device successfully initialized'
+            }
+            this.publishOperationalStateChange();
+
             deferred.resolve();
         } else {
+            this.operationalState = {
+                status: 'OK',
+                message: 'Load Control Device successfully initialized'
+            }
+            this.publishOperationalStateChange();
+            
             deferred.resolve();
         }
 
